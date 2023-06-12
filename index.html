@@ -13,9 +13,12 @@
 
 <body class="bg-image">
   <!-- SECTION HEADER -->
-  <header class="container-fluid d-flex justify-content-end">
-    <section class="row">
-      <div class="col-2 m-5">
+  <header class="container-fluid">
+    <section class="row d-flex">
+      <div id="announcer" class="col-12 text-center fs-1 text-light">
+        First to 20 Wins!
+      </div>
+      <div class="col-12 d-flex justify-content-end">
         <button onclick="resetScore()" class="btn btn-danger"> RESET</button>
       </div>
     </section>
@@ -38,11 +41,14 @@
         <div class=" col-12 d-flex flex-row justify-content-between">
           <div class=" d-flex flex-column">
             <button onclick="addScore('home',1)" class="btn btn-primary my-5 fs-1"> HOME +1 </button>
-            <button onclick="addScore('home',3)" class="btn btn-primary fs-1"> HOME +3</button>
+            <button onclick="addScore('home',3)" class="btn btn-primary mb-5 fs-1"> HOME +3</button>
+            <button onclick="addScore('home',-1)" class="btn btn-primary fs-1"> HOME -1</button>
+
           </div>
           <div class=" d-flex flex-column">
             <button onclick="addScore('away',1)" class="btn btn-primary my-5 fs-1"> AWAY +1</button>
-            <button onclick="addScore('away',3)" class="btn btn-primary fs-1"> AWAY +3</button>
+            <button onclick="addScore('away',3)" class="btn btn-primary mb-5 fs-1"> AWAY +3</button>
+            <button onclick="addScore('away',-1)" class="btn btn-primary fs-1"> AWAY -1</button>
           </div>
         </div>
       </div>

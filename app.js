@@ -1,5 +1,6 @@
 let homeScore = 0;
 let awayScore = 0;
+let winningTeam = 'none'
 
 // Need a funtion that adds points to the appropriate team with the onclick invoke
 
@@ -27,27 +28,46 @@ let awayScore = 0;
 //   shownAwayScore.innerText = awayScore;
 // }
 
+
+
 function resetScore() {
   homeScore = 0;
   awayScore = 0;
   let showAwayScore = document.getElementById('away-Score')
   let showHomeScore = document.getElementById('home-score')
+  let teamWins = document.getElementById('announcer')
   showHomeScore.innerText = homeScore;
   showAwayScore.innerText = awayScore;
+  teamWins.innerText = (`First to 20 Wins!`)
 }
 
 function addScore(team, value) {
-  if (team == 'home') {
-    homeScore += value;
-    showScore(team);
-    return
-  } else {
-    awayScore += value;
-    showScore(team);
-    return
+  if (homeScore >= 20 || awayScore >= 20) {
+    if (homeScore >= awayScore) {
+      winningTeam = 'HOME'
+    } else {
+      winningTeam = 'AWAY'
+    }
+    showWinningTeam(winningTeam)
   }
 
+  console.log('point')
+  if (homeScore < 20 && awayScore < 20) {
+    if (team == 'home') {
+      homeScore += value;
+      showScore(team);
+      return
+    } else {
+      awayScore += value;
+      showScore(team);
+      return
+    }
+  }
+}
 
+function showWinningTeam(winningTeam) {
+  let teamWins = document.getElementById('announcer')
+  teamWins.innerText = (`${winningTeam} TEAM HAS WON!!!`)
 }
 
 function showScore(team) {
@@ -60,6 +80,3 @@ function showScore(team) {
   }
 }
 
-// function addScore(team) {
-
-// }
