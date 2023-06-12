@@ -1,0 +1,15 @@
+.bg-image {
+  background-image: url(https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1623&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glass {
+  /* From https://css.glass */
+  background: rgba(0, 83, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  border: 1px solid rgba(0, 83, 255, 1);
+}

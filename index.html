@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body class="bg-image">
+  <!-- SECTION HEADER -->
+  <header class="container-fluid d-flex justify-content-end">
+    <section class="row">
+      <div class="col-2 m-5">
+        <button onclick="resetScore()" class="btn btn-danger"> RESET</button>
+      </div>
+    </section>
+  </header>
+
+  <!-- SECTION MAIN -->
+  <main class="container-fluid d-flex justify-content-center">
+    <section class="row d-flex flex-column">
+      <div class="glass rounded p-5">
+        <div class="col-12 d-flex flex-row">
+          <div>
+            <h1 class="m-5 text-center text-light">HOME</h1>
+            <h2 id="home-score" class="m-5 text-center text-light">SCORE</h2>
+          </div>
+          <div>
+            <h1 class="m-5 text-center text-ligh text-light">AWAY</h1>
+            <h2 id="away-Score" class="m-5 text-center text-light">SCORE</h2>
+          </div>
+        </div>
+        <div class=" col-12 d-flex flex-row justify-content-between">
+          <div class=" d-flex flex-column">
+            <button onclick="addScore('home',1)" class="btn btn-primary my-5 fs-1"> HOME +1 </button>
+            <button onclick="addScore('home',3)" class="btn btn-primary fs-1"> HOME +3</button>
+          </div>
+          <div class=" d-flex flex-column">
+            <button onclick="addScore('away',1)" class="btn btn-primary my-5 fs-1"> AWAY +1</button>
+            <button onclick="addScore('away',3)" class="btn btn-primary fs-1"> AWAY +3</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION FOOTER -->
+  <footer class="container-fluid">
+    <section class="row"></section>
+
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>
